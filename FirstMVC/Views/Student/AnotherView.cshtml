@@ -1,0 +1,29 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AnotherView</title>
+</head>
+<body>
+    <div> 
+        
+        <h1> Hello WORLD</h1>
+        <h6>Student Name : @ViewData["studentname"]</h6>
+        @*@foreach (var item in (IEnumerable<int>) ViewData["numbers"])
+        {
+            <p>@item</p>
+        }*@
+@*View bag is dynamic type*@
+        @foreach (var item in ViewBag.numbers)
+        {
+            <p>@item</p>
+        }
+    </div>
+</body>
+</html>

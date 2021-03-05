@@ -1,0 +1,22 @@
+﻿@model FirstMVC.Models.Address
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SelectCities</title>
+</head>
+<body>
+    <div> 
+        @using (Html.BeginForm())
+        {
+            @Html.DropDownListFor(m=>m.SelectedCity, new SelectList(Model.myCities,"Value","Text"))
+        <input type="submit" name="name" value="Select City" />
+        }
+    </div>
+</body>
+</html>
